@@ -1,13 +1,13 @@
 import os
 
-```
+'''
 PATH EXAMPLES:
 
 "http://s3.amazonaws.com/bs-platform/windows/browsers/edge/81.0.410.1_edge_installer.exe"
 "http://s3.amazonaws.com/bs-platform/windows/browsers/edge/80.0.361.32_edge_installer.exe"
 "http://s3.amazonaws.com/bs-platform/mac/browsers/edge/80.0.361.32_edge_installer.pkg"
 
-```
+'''
 
 dld = [
     {
