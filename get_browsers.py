@@ -1,12 +1,12 @@
 import os
 
-def download_using_wget:
+def download_using_wget():
     print "==> Downloading using WGET"
 
-def s3cmd_upload:
+def s3cmd_upload():
     print "==> Uploading to s3 using s3cmd"
 
-def s3cmd_ls
+def s3cmd_ls():
     print "==> s3cmd LS"
 
 if __name__ == "__main__":
