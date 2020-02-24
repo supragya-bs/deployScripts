@@ -29,7 +29,7 @@ def download_using_wget(dct):
     if choice != 1:
         print "Ending"
         exit()
-    os.system("wget "+dct["Url"]+" -O ~/supragya/wget_temp/wgetdownload")
+    os.system("wget \""+dct["Url"]+"\" -O ~/supragya/wget_temp/wgetdownload")
 
 def s3cmd_upload(dct):
     print "==> Uploading to s3 using s3cmd"
