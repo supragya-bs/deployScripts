@@ -13,12 +13,12 @@ dld = [
     {
         "Name": "Mac - Edge 82 Dev",
         "Url": "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdgeDev-82.0.425.3.pkg?platform=Mac&Consent=1&channel=Dev",
-        "S3path": "http://s3.amazonaws.com/bs-platform/mac/browsers/edge/MicrosoftEdgeDev-82.0.425.3.pkg"
+        "S3path": "s3://bs-platform/mac/browsers/edge/MicrosoftEdgeDev-82.0.425.3.pkg"
     },
     {
         "Name": "Mac - Edge 81 Beta",
         "Url": "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdgeBeta-81.0.416.12.pkg?platform=Mac&Consent=1&channel=Beta",
-        "S3path": "http://s3.amazonaws.com/bs-platform/mac/browsers/edge/MicrosoftEdgeBeta-81.0.416.12.pkg"
+        "S3path": "s3://bs-platform/mac/browsers/edge/MicrosoftEdgeBeta-81.0.416.12.pkg"
     }
 ]
 
