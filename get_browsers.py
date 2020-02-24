@@ -3,11 +3,15 @@ import os
 '''
 PATH EXAMPLES:
 
-"http://s3.amazonaws.com/bs-platform/windows/browsers/edge/81.0.410.1_edge_installer.exe"
-"http://s3.amazonaws.com/bs-platform/windows/browsers/edge/80.0.361.32_edge_installer.exe"
-"http://s3.amazonaws.com/bs-platform/mac/browsers/edge/80.0.361.32_edge_installer.pkg"
+"s3://bs-platform/windows/browsers/edge/80.0.361.32_edge_installer.exe"
+"s3://bs-platform/mac/browsers/edge/MicrosoftEdgeDev-82.0.425.3.pkg"
 
 '''
+
+s3_views = [
+    "s3://bs-platform/windows/browsers/edge/"
+    "s3://bs-platform/mac/browsers/edge/"
+]
 
 dld = [
     {
@@ -47,6 +51,9 @@ def s3cmd_ls(dct):
     print "==> s3cmd LS"
     os.system("s3cmd ls "+dct["S3path"])
 
+def full_view():
+    
+
 if __name__ == "__main__":
     print "=> GET BROWSERS"
     for b in dld:
@@ -58,5 +65,7 @@ if __name__ == "__main__":
         s3cmd_upload(b)
         print "==> Step 3"
         s3cmd_ls(b)
+        print "==> Step 4"
+        s3cmd_ls(b)        
         print "-------------------------------------------------------------"
 
