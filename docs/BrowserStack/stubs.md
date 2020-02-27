@@ -1,4 +1,12 @@
-# quick .bashrc
+# quick .bashrc local
+
+```bash
+alias dplmac="ssh app@deploy.bsstag.com"
+alias fastgitpush="git add --all; git commit -m \"Minor update\"; git push origin master;"
+alias showdirtybits="cat lib/browsers.json | grep \"\\\"dirty\\\": \\\"11\\\"\" -B 5 --color=auto"
+```
+
+# quick .bashrc deployMac
 
 ```bash
 alias dplmac="ssh app@deploy.bsstag.com"
@@ -10,13 +18,16 @@ alias showdirtybits="cat lib/browsers.json | grep \"\\\"dirty\\\": \\\"11\\\"\" 
 
 ### CMD to remember (test)
 
-| CMD     | DESC                               |
-| ------- | ---------------------------------- |
-| `addm`  | Add Mac Terminals to stagplatform  |
-| `addw`  | Add Win Terminals to stagplatform  |
-| `logws` | tail -f Log Win `start_server.log` |
-| `logww` | tail -f Log Win `win_server.log`   |
-|         |                                    |
+| CMD       | DESC                               |
+| --------- | ---------------------------------- |
+| `addm`    | Add Mac Terminals to stagplatform  |
+| `addw`    | Add Win Terminals to stagplatform  |
+| `logws`   | tail -f Log Win `start_server.log` |
+| `logww`   | tail -f Log Win `win_server.log`   |
+| `dplinfo` | Deploy Folder / DB infos           |
+|           |                                    |
+
+
 
 ### Show what's going on in each deploy folder
 
@@ -123,7 +134,7 @@ ruby browser_automation/add_terminals.rb supragya-block thor
 
 #### Add windows machines (test)
 
-```
+```bash
 for i in \
 207.254.62.174 207.254.37.233 207.254.37.40 \
 ruby ~/downloadable/add_win.rb $i callbacks-stagplatform; \
@@ -132,7 +143,7 @@ done;
 
 #### Add Mac machines (test)
 
-```
+```bash
 for i in \
 207.254.62.174 207.254.37.233 207.254.37.40 \
 ruby ~/downloadable/add_mac.rb $i callbacks-stagplatform; \
@@ -141,7 +152,7 @@ done;
 
 #### Delete machines from env (test)
 
-```
+```bash
 for i in \
 207.254.62.174 207.254.37.233 207.254.37.40 \
 ruby ~/staging_deploy/scripts/delete_ip.rb $i callbacks-stagplatform bad_terminal; done;
