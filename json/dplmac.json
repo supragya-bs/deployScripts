@@ -5,7 +5,7 @@
     "deploy_on_esxi" : false, 
     "run_only_once_on_esxi" : false,
     "pre_deploy_methods" : [],
-    "method_to_run" : ["Browsers.call_install_for(\\\"opera\\\", \\\"67\\\", [\\\"stable\\\", \\\"dev\\\"], false); Code.code_update(\\\"opera67\\\"); Base.reboot"],
+    "method_to_run" : ["BB.call_install_for(\\\"opera\\\", \\\"67\\\", [\\\"stable\\\", \\\"dev\\\"], false); Code.code_update(\\\"opera67\\\"); Base.reboot"],
     "revert_method" : [],
     "platform_testing" : false,  
     "platform_testing_folder" : "platform-testing2",
