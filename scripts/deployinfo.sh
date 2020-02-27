@@ -5,7 +5,7 @@ cd ~/deploy3; printf "Deploy3: "; git rev-parse --abbrev-ref HEAD;
 cd ~/deploy4; printf "Deploy4: "; git rev-parse --abbrev-ref HEAD;
 cd ~/deploy5; printf "Deploy5: "; git rev-parse --abbrev-ref HEAD;
 cd ~/deploy6; printf "Deploy6: "; git rev-parse --abbrev-ref HEAD;
-echo "--------- DEPLOY DBs -----------"
+echo "----------- DEPLOY DBs -------------"
 printf "\tDBTYPE\tTOTAL\tDONE\tREM\tTIME\tLOCK\n"
 printf "WINDOWS\n"
 printf "\tWinDB1: "
