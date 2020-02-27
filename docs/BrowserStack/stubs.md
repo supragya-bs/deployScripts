@@ -30,8 +30,6 @@ alias s_wdpl="pd ~/supragya/json/dplwin.json"
 | `dplinfo` | Deploy Folder / DB infos           |
 |           |                                    |
 
-
-
 ### Show what's going on in each deploy folder
 
 ```bash
