@@ -1,4 +1,6 @@
-alias s_pull="cd ~/supragya/; git pull; cd -;"
+alias s_pull="cd ~/supragya/; git pull; bash ~/supragya/scripts/setal.sh; cd -;"
 alias s_dinfo="bash ~/supragya/scripts/deployinfo.sh"
 alias s_mjson="coolcat ~/supragya/json/dplmac.json"
 alias s_wjson="coolcat ~/supragya/json/dplwin.json"
+alias s_mdpl="pd ~/supragya/json/dplmac.json"
+alias s_wdpl="pd ~/supragya/json/dplwin.json"
