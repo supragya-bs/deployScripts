@@ -21,3 +21,20 @@ with open(filename) as f:
 # This is because the lines contain the newline character '\n'.
 for line in content:
     print(line),
+
+
+https://forwardslack.bsstag.com/send_text_message_to_slack
+
+alert_json = {
+    "alert_type": "DEPLOY_MACHINE_ALERT",
+    'message_blocks' : [
+        {
+            'type': 'section',
+            'text': {
+                'type': 'mrkdwn',
+                'text': "*" + "This is test message" + "*"
+            }
+        }
+    ],
+    'auth_key': 'start'
+}
