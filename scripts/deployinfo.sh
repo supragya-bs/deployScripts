@@ -11,31 +11,31 @@ printf "WINDOWS\n"
 printf "\tWinDB1: "
 curl -u admin:pq8CcXo9qhd5Yd9bVE "http://deploy.bsstag.com/deploy_status/1" > ~/tmp_deploy_db_web_response 2>/dev/null;
 grep Windows ~/tmp_deploy_db_web_response -A 18 | awk  -F '[<>]' '/<td / { gsub(/<b>/, ""); sub(/ .*/, "", $3); printf $3; printf "\t"; } '
-[ -f "/tmp/deploy1_win.lock" ] && printf "YES" || printf "NO"
+[ -f "/tmp/win_deploy.lock" ] && printf "YES" || printf "NO"
 echo " "
 printf "\tWinDB2: "
 curl -u admin:pq8CcXo9qhd5Yd9bVE "http://deploy.bsstag.com/deploy_status/2" > ~/tmp_deploy_db_web_response 2>/dev/null;
 grep Windows ~/tmp_deploy_db_web_response -A 18 | awk  -F '[<>]' '/<td / { gsub(/<b>/, ""); sub(/ .*/, "", $3); printf $3; printf "\t"; } '
-[ -f "/tmp/deploy2_win.lock" ] && printf "YES" || printf "NO"
+[ -f "/tmp/win_deploy2.lock" ] && printf "YES" || printf "NO"
 echo " "
 printf "\tWinDB3: "
 curl -u admin:pq8CcXo9qhd5Yd9bVE "http://deploy.bsstag.com/deploy_status/3" > ~/tmp_deploy_db_web_response 2>/dev/null;
 grep Windows ~/tmp_deploy_db_web_response -A 18 | awk  -F '[<>]' '/<td / { gsub(/<b>/, ""); sub(/ .*/, "", $3); printf $3; printf "\t"; } '
-[ -f "/tmp/deploy3_win.lock" ] && printf "YES" || printf "NO"
+[ -f "/tmp/win_deploy3.lock" ] && printf "YES" || printf "NO"
 echo " "
 printf "MAC\n"
 printf "\tMacDB1: "
 curl -u admin:pq8CcXo9qhd5Yd9bVE "http://deploy.bsstag.com/deploy_status/1" > ~/tmp_deploy_db_web_response 2>/dev/null;
 grep "Mac Terminal" ~/tmp_deploy_db_web_response -A 18 | awk  -F '[<>]' '/<td / { gsub(/<b>/, ""); sub(/ .*/, "", $3); printf $3; printf "\t"; } '
-[ -f "/tmp/deploy1_mac.lock" ] && printf "YES" || printf "NO"
+[ -f "/tmp/mac_deploy.lock" ] && printf "YES" || printf "NO"
 echo " "
 printf "\tMacDB2: "
 curl -u admin:pq8CcXo9qhd5Yd9bVE "http://deploy.bsstag.com/deploy_status/2" > ~/tmp_deploy_db_web_response 2>/dev/null;
 grep "Mac Terminal" ~/tmp_deploy_db_web_response -A 18 | awk  -F '[<>]' '/<td / { gsub(/<b>/, ""); sub(/ .*/, "", $3); printf $3; printf "\t"; } '
-[ -f "/tmp/deploy2_mac.lock" ] && printf "YES" || printf "NO"
+[ -f "/tmp/mac_deploy2.lock" ] && printf "YES" || printf "NO"
 echo " "
 printf "\tMacDB3: "
 curl -u admin:pq8CcXo9qhd5Yd9bVE "http://deploy.bsstag.com/deploy_status/3" > ~/tmp_deploy_db_web_response 2>/dev/null;
 grep "Mac Terminal" ~/tmp_deploy_db_web_response -A 18 | awk  -F '[<>]' '/<td / { gsub(/<b>/, ""); sub(/ .*/, "", $3); printf $3; printf "\t"; } '
-[ -f "/tmp/deploy3_mac.lock" ] && printf "YES" || printf "NO"
+[ -f "/tmp/mac_deploy3.lock" ] && printf "YES" || printf "NO"
 echo " "

@@ -1,17 +1,20 @@
 # quick .bashrc local
 
 ```bash
-alias dplmac="ssh app@deploy.bsstag.com"
-alias fastgitpush="git add --all; git commit -m \"Minor update\"; git push origin master;"
-alias showdirtybits="cat lib/browsers.json | grep \"\\\"dirty\\\": \\\"11\\\"\" -B 5 --color=auto"
+alias s_dplmac="ssh app@deploy.bsstag.com"
+alias s_push="git add --all; git commit -m \"Minor update\"; git push origin master;"
+alias s_dirty="cat lib/browsers.json | grep \"\\\"dirty\\\": \\\"11\\\"\" -B 5 --color=auto"
 ```
 
 # quick .bashrc deployMac
 
 ```bash
-alias dplmac="ssh app@deploy.bsstag.com"
-alias fastgitpush="git add --all; git commit -m \"Minor update\"; git push origin master;"
-alias showdirtybits="cat lib/browsers.json | grep \"\\\"dirty\\\": \\\"11\\\"\" -B 5 --color=auto"
+alias s_pull="cd ~/supragya/; git pull; bash ~/supragya/scripts/setal.sh; cd -;"
+alias s_dinfo="bash ~/supragya/scripts/deployinfo.sh"
+alias s_mjson="coolcat ~/supragya/json/dplmac.json"
+alias s_wjson="coolcat ~/supragya/json/dplwin.json"
+alias s_mdpl="pd ~/supragya/json/dplmac.json"
+alias s_wdpl="pd ~/supragya/json/dplwin.json"
 ```
 
 # Stubs
