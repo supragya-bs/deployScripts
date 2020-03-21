@@ -6,7 +6,7 @@ alias s_push="git add --all; git commit -m \"Minor update\"; git push origin mas
 alias s_dirty="cat lib/browsers.json | grep \"\\\"dirty\\\": \\\"11\\\"\" -B 5 --color=auto"
 ```
 
-# quick .bashrc deployMac
+# quick .bashrc deploymachine
 
 ```bash
 alias s_pull="cd ~/supragya/; git pull; bash ~/supragya/scripts/setal.sh; cd -;"
@@ -21,14 +21,27 @@ alias s_wdpl="pd ~/supragya/json/dplwin.json"
 
 ### CMD to remember (test)
 
-| CMD       | DESC                               |
-| --------- | ---------------------------------- |
-| `addm`    | Add Mac Terminals to stagplatform  |
-| `addw`    | Add Win Terminals to stagplatform  |
-| `logws`   | tail -f Log Win `start_server.log` |
-| `logww`   | tail -f Log Win `win_server.log`   |
-| `dplinfo` | Deploy Folder / DB infos           |
-|           |                                    |
+| CMD                              | DESC                                                      |
+| -------------------------------- | --------------------------------------------------------- |
+| s_dinfo                          | Deploy machine folder and DB info                         |
+| s_addm `env IP LIST`             | Add mac Terminals to env                                  |
+| s_addw `env IPLIST`              | Add win Terminals to env                                  |
+| s_addeachm `env`                 | Add each mac Terminal type to env                         |
+| s_addeachw `env`                 | Add each win Terminal type to env                         |
+| s_logw `IP`                      | Start logging windows device                              |
+| s_logm `IP`                      | Start loggin mac device                                   |
+| s_ipninja                        | ipNinja invoke                                            |
+| s_dirtyshow                      | Show dirty bits in `terminalDeploy`                       |
+| s_dirtysetm `browserlist`        | Set only the dirty bits of browsers in browser list (Mac) |
+| s_dirtysetw `browserlist`        | Set only the dirty bits of browsers in browser list (Win) |
+| s_slblock `user reason 1f 3dwin` | Slack notify blocking in deploy machine                   |
+| s_slrel `user reason 1f 3dwin`   | Slack notify releasing in deploy machine                  |
+| s_pdm                            | Run parallel deploy with Mac's JSON (verifies first)      |
+| s_pdshowm                        | Show Mac's parallel deploy JSON                           |
+| s_pdw                            | Run parallel deploy with Win's JSON (verifies first)      |
+| s_pdshoww                        | Show Win's parallel deploy JSON                           |
+| s_pull                           | Fast git pull on deploy machine                           |
+| s_push                           | Fast git origin push                                      |
 
 ### Show what's going on in each deploy folder
 
@@ -127,13 +140,13 @@ git push origin master
 
 ## deploy commands
 
-#### Block alltype terminals, add to environment
+#### alltype_block_env
 
 ```bash
 ruby browser_automation/add_terminals.rb supragya-block thor
 ```
 
-#### Add windows machines (test)
+#### add_win
 
 ```bash
 for i in \
@@ -142,7 +155,7 @@ ruby ~/downloadable/add_win.rb $i callbacks-stagplatform; \
 done;
 ```
 
-#### Add Mac machines (test)
+#### add_mac
 
 ```bash
 for i in \
@@ -151,13 +164,19 @@ ruby ~/downloadable/add_mac.rb $i callbacks-stagplatform; \
 done;
 ```
 
-#### Delete machines from env (test)
 
-```bash
-for i in \
-207.254.62.174 207.254.37.233 207.254.37.40 \
-ruby ~/staging_deploy/scripts/delete_ip.rb $i callbacks-stagplatform bad_terminal; done;
+
+
+
+```
+- webassembly
+- javascript pwa
+- D3js
+- https://hal-emse.ccsd.cnrs.fr/emse-01006565/file/2014_01_WP_Cattaruzza_The_Multi_Trip_Vehicle_Routing_Problem_with_Time_Windows_and_Release_Dates.pdf
+- educative.io 
 ```
 
-
+```
+- joris mail - again deploy done
+```
 
